@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/favicon-113cdfd5.ico" rel="icon" type="image/ico" />
+    <title>Getting Started</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-db5c1bc9.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-9d156cc7.png" class="logo" alt="" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-an-account" class="toc-h2 toc-link" data-title="Creating an account">Creating an account</a>
+                  </li>
+                  <li>
+                    <a href="#setting-your-realm-list" class="toc-h2 toc-link" data-title="Setting your realm list">Setting your realm list</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#creating-a-server" class="toc-h1 toc-link" data-title="Creating a server">Creating a server</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-an-account-2" class="toc-h2 toc-link" data-title="Creating an account">Creating an account</a>
+                  </li>
+                  <li>
+                    <a href="#deploying-a-server" class="toc-h2 toc-link" data-title="Deploying a server">Deploying a server</a>
+                  </li>
+                  <li>
+                    <a href="#server-type" class="toc-h2 toc-link" data-title="Server type">Server type</a>
+                  </li>
+                  <li>
+                    <a href="#cpu-amp-storage" class="toc-h2 toc-link" data-title="CPU &amp; Storage">CPU &amp; Storage</a>
+                  </li>
+                  <li>
+                    <a href="#server-location" class="toc-h2 toc-link" data-title="Server location">Server location</a>
+                  </li>
+                  <li>
+                    <a href="#server-image" class="toc-h2 toc-link" data-title="Server image">Server image</a>
+                  </li>
+                  <li>
+                    <a href="#server-size" class="toc-h2 toc-link" data-title="Server size">Server size</a>
+                  </li>
+                  <li>
+                    <a href="#auto-backups" class="toc-h2 toc-link" data-title="Auto backups">Auto backups</a>
+                  </li>
+                  <li>
+                    <a href="#additional-features" class="toc-h2 toc-link" data-title="Additional features">Additional features</a>
+                  </li>
+                  <li>
+                    <a href="#hostname-amp-price" class="toc-h2 toc-link" data-title="Hostname &amp; Price">Hostname &amp; Price</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#starting-the-emulator" class="toc-h1 toc-link" data-title="Starting the emulator">Starting the emulator</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#address-amp-password" class="toc-h2 toc-link" data-title="Address &amp; Password">Address &amp; Password</a>
+                  </li>
+                  <li>
+                    <a href="#openssh" class="toc-h2 toc-link" data-title="OpenSSH">OpenSSH</a>
+                  </li>
+                  <li>
+                    <a href="#visual-studio-code" class="toc-h2 toc-link" data-title="Visual Studio Code">Visual Studio Code</a>
+                  </li>
+                  <li>
+                    <a href="#connecting-to-the-server" class="toc-h2 toc-link" data-title="Connecting to the server">Connecting to the server</a>
+                  </li>
+                  <li>
+                    <a href="#starting-the-server" class="toc-h2 toc-link" data-title="Starting the server">Starting the server</a>
+                  </li>
+                  <li>
+                    <a href="#accessing-the-server" class="toc-h2 toc-link" data-title="Accessing the server">Accessing the server</a>
+                  </li>
+                  <li>
+                    <a href="#client-setup" class="toc-h2 toc-link" data-title="Client setup">Client setup</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#what-now" class="toc-h1 toc-link" data-title="What now?">What now?</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://discord.gg/rqq33HmMyX'>Need help?</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>If you&#39;re a developer you can create your own server. If you&#39;re a player you can help test other people&#39;s servers.</p>
+<h2 id='creating-an-account'>Creating an account</h2><div class="highlight"><pre class="highlight plaintext"><code>/account create &lt;username&gt; &lt;password&gt; &lt;password&gt;
+</code></pre></div>
+<p>You can create a Wobblin&#39; Goblin account on the <a href="https://discord.gg/rqq33HmMyX">Discord</a>. Direct message Winzig to create an account.</p>
+
+<p><img src="images/create-account-d4e1d3d6.png" alt="Create Account" /></p>
+<h2 id='setting-your-realm-list'>Setting your realm list</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist logon.wobgob.org
+</code></pre></div>
+<p>You&#39;ll want to set the realm list for your client in <code>Data/enUS/realmlist.wtf</code>.</p>
+
+<aside class="success">
+  If you're a player, you're done!
+</aside>
+
+<aside class="notice">
+  If you're a developer, you've got a few extra steps before you create a server.
+</aside>
+<h1 id='creating-a-server'>Creating a server</h1>
+<blockquote>
+<p>Think of Docker as running a computer inside a computer.</p>
+
+<p>A virtual private server (or VPS) is a server that someone else hosts for you. This has the advantage of maximizing uptime of your server as that&#39;s the hosting provider&#39;s job. If you hosted at home you&#39;d have to contend with power outages and loss of internet.</p>
+</blockquote>
+
+<p>It&#39;s easier to run a server using Linux than other operating systems. Getting Docker working on Windows can be a headache so we&#39;ll be renting a virtual private server from a hosting provider.</p>
+
+<p>We&#39;ll be using <a href="https://www.vultr.com/">Vultr</a> in this tutorial but most major hosting providers will be similar.</p>
+<h2 id='creating-an-account-2'>Creating an account</h2>
+<p>The first thing you&#39;ll want to do is create an account with your hosting provider. For Vultr you can sign up at <a href="https://www.vultr.com/register/">https://www.vultr.com/register/</a>.</p>
+<h2 id='deploying-a-server'>Deploying a server</h2>
+<p>You&#39;ll then be redirected to <a href="https://my.vultr.com/">https://my.vultr.com/</a>. At this point you&#39;ll want to deploy a server.</p>
+
+<p><img src="images/deploy-server-bddb6f50.jpg" alt="Deploy Server" /></p>
+<h2 id='server-type'>Server type</h2>
+<blockquote>
+<p>Our servers are incredibly memory hungry which is why you want to focus on increasing your memory if the server is suffering performance issues.</p>
+</blockquote>
+
+<p>After you&#39;ve chosen to deploy a server you&#39;ll have to choose the type of server. A regular server is fine for our purposes. As you grow you can choose different types of servers which are memory-optimized.</p>
+
+<p><img src="images/choose-server-0db0fe41.jpg" alt="Choose Server" /></p>
+<h2 id='cpu-amp-storage'>CPU &amp; Storage</h2>
+<p>While not particularly important because our servers are mostly memory bound, you can pick a CPU and storage type here.</p>
+
+<p><img src="images/cpu-and-storage-8bbce216.jpg" alt="CPU &amp; Storage Technology" /></p>
+<h2 id='server-location'>Server location</h2>
+<p>The server&#39;s location is incredibly important so you and your player base have low latency. It&#39;s suggested you choose a location near you.</p>
+
+<p><img src="images/server-location-98dd3c6c.jpg" alt="Server Location" /></p>
+<h2 id='server-image'>Server image</h2>
+<p>It&#39;s suggested you use a Docker image. Those using Vultr will want to pick Ubuntu 20.04 x64 as the operating system type for the Docker image.</p>
+
+<p><img src="images/server-image-1e52f75f.jpg" alt="Server Image" /></p>
+<h2 id='server-size'>Server size</h2>
+<p>Server size typically determines the storage, number of CPUs, memory, bandwidth, and the majority of the price of your server. We require at least 4 gigabyte of memory so we&#39;ll go for that option.</p>
+
+<p><img src="images/server-size-4f973b0d.jpg" alt="Server Size" /></p>
+<h2 id='auto-backups'>Auto backups</h2>
+<p>We highly recommend enabling auto backups for any server that isn&#39;t throwaway. This will cost you 20% of the price.</p>
+
+<p><img src="images/auto-backups-f2cca998.jpg" alt="Add Auto Backups" /></p>
+<h2 id='additional-features'>Additional features</h2>
+<blockquote>
+<p>If you know what SSH keys are you can add one here and use it to log into your root account.</p>
+</blockquote>
+
+<p>Don&#39;t worry about any of the additional features and keep them at the default.</p>
+
+<p><img src="images/additional-features-94e91c76.jpg" alt="Additional Features" /></p>
+<h2 id='hostname-amp-price'>Hostname &amp; Price</h2>
+<blockquote>
+<p>Hostnames are domains, where a domain is a hierarchical, dot-separated list of subdomains; for example, the machine <code>broken</code>, in the <code>wobgob</code> subdomain of the <code>org</code> domain would be represented as <code>broken.wobgob.org</code>.</p>
+</blockquote>
+
+<p><q>There are only two hard things in Computer Science: cache invalidation and naming things.</q>
+– Phil Karlton</p>
+
+<p>You&#39;ll have to think up a hostname for your server. To help with thinking up a name there&#39;s <a target="_blank" href="https://wobgob.org/mnemonics/">Wobblin&#39; Goblin&#39;s Mnemonics</a>. You can also include a domain name in your hostname. If you need a domain you can use <a href="https://domains.google/">Google Domains</a> or any other domain name registrar.</p>
+
+<aside class="notice">
+  You don't need to register a domain name to use it in a hostname but it is recommended.
+</aside>
+
+<p><img src="images/hostname-and-price-896756fc.jpg" alt="Hostname &amp; Price" /></p>
+
+<p>Given our specifications the price of the server is standard. Note that you usually don&#39;t pay for a month upfront but rather in hourly increments.</p>
+
+<aside class="success">
+  Hit "Deploy Now" and your server will start installing.
+</aside>
+<h1 id='starting-the-emulator'>Starting the emulator</h1>
+<blockquote>
+<p>Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.</p>
+</blockquote>
+
+<p>After you server is installed its status will be set to &quot;Running&quot; and you&#39;ll be able to click on it.</p>
+
+<p><img src="images/instances-0aa5dec1.jpg" alt="Instances" /></p>
+
+<p>However, the server is not running the emulator yet which we installed Docker to use. To do that first we&#39;ll need the server&#39;s address and password.</p>
+<h2 id='address-amp-password'>Address &amp; Password</h2>
+<p>When you open your instance you&#39;ll be confronted by a server overview. There&#39;s no need to panic though as we only need the IP address, username, and password.</p>
+
+<p><img src="images/server-overview-39bbff7b.jpg" alt="Server Overview" /></p>
+
+<aside class="notice">
+  Note down the IP address, username, and password because you'll need them later to log into the server.
+</aside>
+<h2 id='openssh'>OpenSSH</h2>
+<p>Our beginner development environment is comprised of an OpenSSH client and Visual Studio Code with the Remote SSH extension which is the basis for a more advanced development environment.</p>
+<h3 id='windows'>Windows</h3>
+<p>To install the OpenSSH client first open <strong>Settings</strong>, select <strong>Apps</strong> &gt; <strong>Apps &amp; Features</strong>, then select <strong>Optional Features</strong>.</p>
+
+<p><img src="images/optional-features-edfe1d7f.jpg" alt="Optional Features" /></p>
+
+<p>Search the list for <code>openssh</code> to see if the OpenSSH client is already installed. If not, at the top of the page, select <strong>Add a feature</strong>.</p>
+
+<p><img src="images/add-a-feature-db13c038.jpg" alt="Add a feature" /></p>
+
+<p>Find the <strong>OpenSSH Client</strong>, then click <strong>Install</strong>.</p>
+
+<aside class="warning">
+  Do not install the OpenSSH server if you don't know what you're doing because it's a security risk.
+</aside>
+
+<p><img src="images/install-feature-58e53991.jpg" alt="Install OpenSSH Client" /></p>
+<h3 id='macos'>macOS</h3>
+<p>macOS comes with an OpenSSH client.</p>
+<h3 id='linux'>Linux</h3><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Debian and Ubuntu</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>openssh-client
+
+<span class="c"># Arch Linux and Manjaro</span>
+<span class="nb">sudo </span>pacman <span class="nt">-S</span> openssh
+
+<span class="c"># OpenSUSE</span>
+<span class="nb">sudo </span>zypper <span class="nb">install </span>openssh
+
+<span class="c"># Fedora</span>
+<span class="nb">sudo </span>dnf <span class="nb">install</span> <span class="nt">-y</span> openssh-clients
+</code></pre></div>
+<p>In Linux you can run a command from the terminal to install the OpenSSH client.</p>
+<h2 id='visual-studio-code'>Visual Studio Code</h2>
+<blockquote>
+<p>An integrated development environment (IDE) is software for building other software. It provides a single graphical user interface (GUI) for a source code editor, build automation, and debugger.</p>
+</blockquote>
+
+<p>Visual Studio Code will be our first integrated development environment (IDE) that you&#39;ll be using for its file manager and terminal for now. We&#39;ll need Visual Studio Code with the Remote SSH extension to do our work. The Remote SSH extension is used to connect to  SSH hosts which our server is one.</p>
+
+<p><img src="images/remote-ssh-extension-61bfadbb.jpg" alt="Remote SSH extension" /></p>
+<h3 id='windows-2'>Windows</h3>
+<p>Install <a target="_blank" href="https://code.visualstudio.com">Visual Studio Code</a>. It is a standard installer and should be easy enough to install. Then <a href="vscode:extension/ms-vscode-remote.remote-ssh">install the Remote SSH extension</a>.</p>
+<h3 id='macos-2'>macOS</h3>
+<p>Follow the setup instructions at <a target="_blank" href="https://code.visualstudio.com/docs/setup/mac">Visual Studio Code on macOS</a>. Then <a href="vscode:extension/ms-vscode-remote.remote-ssh">install the Remote SSH extension</a>.</p>
+<h3 id='linux-2'>Linux</h3>
+<p>Follow the setup instructions for your distribution at <a target="_blank" href="https://code.visualstudio.com/docs/setup/linux">Visual Studio Code on Linux</a>. Then <a href="vscode:extension/ms-vscode-remote.remote-ssh">install the Remote SSH extension</a>.</p>
+<h2 id='connecting-to-the-server'>Connecting to the server</h2>
+<blockquote>
+<p>If you used an SSH key you wouldn&#39;t be prompted for your password. To learn more about setting up an SSH key consult <a target="_blank" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent</a>.</p>
+</blockquote>
+
+<p>With the Remote SSH extension installed, you will see a new status bar item on the far left.</p>
+
+<p><img src="images/remote-status-bar-82bbf29a.jpg" alt="Remote status bar" /></p>
+
+<p>The remote status bar item can quickly show you in which context VS Code is running (local or remote) and clicking on the item will bring up the Remote SSH commands.</p>
+
+<p><img src="images/remote-ssh-commands-d3761bb8.jpg" alt="Remote SSH commands" /></p>
+
+<p>In VS Code, select <strong>Remote-SSH: Connect to Host...</strong> from the Command Palette (<code>F1</code>, <code>Ctrl+Shift+P</code>) and enter <code>&lt;username&gt;@&lt;ip-address&gt;</code> where <code>&lt;username&gt;</code> and <code>&lt;ip-address&gt;</code> are the username and IP address you noted down from your hosting provider previously. In our case the username was <code>root</code> and the IP address was <code>45.76.118.95</code> so we&#39;d enter <code>root@45.76.118.95</code>.</p>
+
+<aside class="success">
+  Enter your password that you noted down previously and you're connected!
+</aside>
+
+<aside class="notice">
+  Choose Linux as the host's operating system if prompted.
+</aside>
+
+<p>The status bar on the far left should have changed to indicate you&#39;re connected to your server. Next you&#39;ll want to open up a terminal so we can start the emulator.</p>
+
+<p><img src="images/open-terminal-d0667c27.jpg" alt="Open Terminal" /></p>
+
+<p>You should now be presented with a prompt such as <code>root@broken:~#</code>.</p>
+<h2 id='starting-the-server'>Starting the server</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Enter this into your terminal. Downloads a file describing the server and</span>
+<span class="c"># then starts the server using Docker.</span>
+wget https://raw.githubusercontent.com/wobgob/core/main/docker-compose.yml<span class="p">;</span> <span class="se">\</span>
+  docker compose up <span class="nt">-d</span>
+</code></pre></div>
+<p>Don&#39;t worry about understanding the command, we&#39;ll be exploring the shell and terminal further in another tutorial.</p>
+<h2 id='accessing-the-server'>Accessing the server</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Access the server's console.</span>
+docker attach core
+<span class="c"># Create an account.</span>
+account create &lt;username&gt; &lt;password&gt;
+<span class="c"># Make it a game master account.</span>
+account <span class="nb">set </span>gmlevel &lt;username&gt; 3 <span class="nt">-1</span>
+</code></pre></div>
+<p>Once the server has initialized you can now access your world server. To detach when you&#39;re finished press <code>Ctrl+P</code> then <code>Ctrl+Q</code>. Once you&#39;re at the server&#39;s console enter the account creation command and elevate that account to be a game master.</p>
+<h2 id='client-setup'>Client setup</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist &lt;ip-address&gt; <span class="c"># Where &lt;ip-address&gt; is the IP address you used earlier.</span>
+</code></pre></div>
+<p>Modify your <code>Data/enUS/realmlist.wtf</code> file so you can connect to your server.</p>
+
+<aside class="success">
+  That's it! Fire up your client and log in using the username and password that you used when creating your account.
+</aside>
+<h1 id='what-now'>What now?</h1>
+<p>Play around a bit. Invite your friends! Think of ways you could change or improve the emulator to better suit your playstyle. It helps to have some way to register accounts for example.</p>
+
+<p>Currently we&#39;re working on tutorials for running, studying, changing, and improving our emulators. Make sure you&#39;ve joined the <a href="https://discord.gg/rqq33HmMyX">Discord</a> and followed us on <a href="https://twitter.com/wobgoborg">Twitter</a> to stay up to date.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
