@@ -324,7 +324,7 @@
             <a href="#creating-a-server" class="toc-h1 toc-link" data-title="Creating a server">Creating a server</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#creating-an-account-2" class="toc-h2 toc-link" data-title="Creating an account">Creating an account</a>
+                    <a href="#signing-up" class="toc-h2 toc-link" data-title="Signing up">Signing up</a>
                   </li>
                   <li>
                     <a href="#deploying-a-server" class="toc-h2 toc-link" data-title="Deploying a server">Deploying a server</a>
@@ -386,7 +386,7 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='https://discord.gg/rqq33HmMyX'>Need help?</a></li>
+            <li><a target="_blank" href='https://discord.gg/rqq33HmMyX'>Need help?</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -395,9 +395,11 @@
         <h1 id='welcome-to-wobblin-39-goblin'>Welcome to Wobblin&#39; Goblin</h1>
 <p>It&#39;s nice to meet you.</p>
 
-<aside class="notice">
-  If you're player you can skip to <a href="#creating-an-account">creating an account</a>. If you're a developer you can skip to <a href="#creating-a-server">creating a server</a>.
-</aside>
+<ul>
+<li>If you&#39;re player you can skip to <a href="#creating-an-account">creating an account</a>.</li>
+<li>If you&#39;re a developer you can skip to <a href="#creating-a-server">creating a server</a>.</li>
+<li>If you&#39;re an experienced developer and have a working Docker installation you can skip to <a href="#starting-the-server">starting the server</a>.</li>
+</ul>
 <h2 id='our-goals'>Our goals</h2>
 <blockquote>
 <p>Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.</p>
@@ -411,10 +413,10 @@
 </ul>
 <h2 id='about-us'>About us</h2>
 <p>Wobblin’ Goblin is a community where we play games and make fun things. If you&#39;re a developer you&#39;ll learn about programming, system administration, and databases amongst other things. While developing your emulator you get to play with others while you learn. We also need players to test the emulators the developers have made so there&#39;s a role for everyone.</p>
-<h2 id='creating-an-account'>Creating an account</h2><div class="highlight"><pre class="highlight plaintext"><code>/account create &lt;username&gt; &lt;password&gt; &lt;password&gt;
+<h2 id='creating-an-account'>Creating an account</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>/account create &lt;username&gt; &lt;password&gt; &lt;password&gt;
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist logon.wobgob.org
 </code></pre></div>
-<p>You can create a Wobblin&#39; Goblin account on the <a href="https://discord.gg/rqq33HmMyX">Discord</a>. Direct message Winzig to create an account.</p>
+<p>You can create a Wobblin&#39; Goblin account on <a href="https://discord.gg/rqq33HmMyX">Discord</a>. Direct message Winzig to create an account.</p>
 
 <p><img src="images/create-account-d4e1d3d6.png" alt="Create Account" /></p>
 
@@ -425,7 +427,7 @@
 </aside>
 
 <aside class="notice">
-  If you're a developer, you've got a few extra steps before you create a server.
+  If you're a developer, you've got a few extra steps before you can start playing.
 </aside>
 <h1 id='creating-a-server'>Creating a server</h1>
 <blockquote>
@@ -437,8 +439,8 @@
 <p>It&#39;s easier to run a server using Linux than other operating systems. Getting Docker working on Windows can be a headache so we&#39;ll be renting a virtual private server from a hosting provider.</p>
 
 <p>We&#39;ll be using <a href="https://www.vultr.com/">Vultr</a> in this tutorial but most major hosting providers will be similar.</p>
-<h2 id='creating-an-account-2'>Creating an account</h2>
-<p>The first thing you&#39;ll want to do is create an account with your hosting provider. For Vultr you can sign up at <a href="https://www.vultr.com/register/">https://www.vultr.com/register/</a>.</p>
+<h2 id='signing-up'>Signing up</h2>
+<p>The first thing you&#39;ll want to do is to sign up with your hosting provider. For Vultr you can sign up at <a href="https://www.vultr.com/register/">https://www.vultr.com/register/</a>.</p>
 <h2 id='deploying-a-server'>Deploying a server</h2>
 <p>You&#39;ll then be redirected to <a href="https://my.vultr.com/">https://my.vultr.com/</a>. At this point you&#39;ll want to deploy a server.</p>
 
@@ -574,7 +576,7 @@
 
 <p><img src="images/remote-ssh-commands-d3761bb8.jpg" alt="Remote SSH commands" /></p>
 
-<p>In VS Code, select <strong>Remote-SSH: Connect to Host...</strong> from the Command Palette (<code>F1</code>, <code>Ctrl+Shift+P</code>) and enter <code>&lt;username&gt;@&lt;ip-address&gt;</code> where <code>&lt;username&gt;</code> and <code>&lt;ip-address&gt;</code> are the username and IP address you noted down from your hosting provider previously. In our case the username was <code>root</code> and the IP address was <code>45.76.118.95</code> so we&#39;d enter <code>root@45.76.118.95</code>.</p>
+<p>In VS Code, select <strong>Remote-SSH: Connect to Host...</strong> from the Command Palette (<code>F1</code>, <code>Ctrl+Shift+P</code>) and enter <code>&lt;username&gt;@&lt;address&gt;</code> where <code>&lt;username&gt;</code> and <code>&lt;address&gt;</code> are the username and IP address you noted down from your hosting provider previously. In our case the username was <code>root</code> and the IP address was <code>45.76.118.95</code> so we&#39;d enter <code>root@45.76.118.95</code>.</p>
 
 <aside class="success">
   Enter your password that you noted down previously and you're connected!
@@ -589,21 +591,27 @@
 <p><img src="images/open-terminal-d0667c27.jpg" alt="Open Terminal" /></p>
 
 <p>You should now be presented with a prompt such as <code>root@broken:~#</code>.</p>
-<h2 id='starting-the-server'>Starting the server</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Enter this into your terminal. Downloads a file describing the server and</span>
-<span class="c"># then starts the server using Docker.</span>
-wget https://raw.githubusercontent.com/wobgob/core/main/docker-compose.yml<span class="p">;</span> <span class="se">\</span>
-  docker compose up <span class="nt">-d</span>
+<h2 id='starting-the-server'>Starting the server</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Enter the following into your terminal at the prompt.</span>
+pip3 <span class="nb">install </span>docker-compose
+
+<span class="c"># Downloads a file describing the server.</span>
+wget https://wobgob.org/docker-compose.yml
+
+<span class="c"># Start the server.</span>
+docker-compose up <span class="nt">-d</span>
 </code></pre></div>
-<p>Don&#39;t worry about understanding the command, we&#39;ll be exploring the shell and terminal further in another tutorial.</p>
+<p>Don&#39;t worry about understanding the commands yet, we&#39;ll be exploring the shell and terminal further in another tutorial.</p>
 <h2 id='accessing-the-server'>Accessing the server</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Access the server's console.</span>
-docker attach core
+docker attach root_server_1
+
 <span class="c"># Create an account.</span>
 account create &lt;username&gt; &lt;password&gt;
+
 <span class="c"># Make it a game master account.</span>
 account <span class="nb">set </span>gmlevel &lt;username&gt; 3 <span class="nt">-1</span>
 </code></pre></div>
-<p>Once the server has initialized you can now access your world server. To detach when you&#39;re finished press <code>Ctrl+P</code> then <code>Ctrl+Q</code>. Once you&#39;re at the server&#39;s console enter the account creation command and elevate that account to be a game master.</p>
-<h2 id='client-setup'>Client setup</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist &lt;ip-address&gt; <span class="c"># Where &lt;ip-address&gt; is the IP address you used earlier.</span>
+<p>Once the server has initialized you can access your world server. To detach when you&#39;re finished press <code>Ctrl+P</code> then <code>Ctrl+Q</code>. Once you&#39;re at the server&#39;s console enter the account creation command and elevate that account to be a game master.</p>
+<h2 id='client-setup'>Client setup</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist &lt;address&gt; <span class="c"># Where &lt;address&gt; is the IP address you used earlier.</span>
 </code></pre></div>
 <p>Modify your <code>Data/enUS/realmlist.wtf</code> file so you can connect to your server.</p>
 
