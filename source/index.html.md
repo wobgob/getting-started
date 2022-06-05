@@ -9,24 +9,38 @@ search: true
 code_clipboard: true
 ---
 
-# Introduction
-If you're a developer you can create your own server. If you're a player you can help test other people's servers.
+# Welcome to Wobblin' Goblin
+It's nice to meet you.
+
+<aside class="notice">
+  If you're player you can skip to <a href="#creating-an-account">creating an account</a>. If you're a developer you can skip to <a href="#creating-a-server">creating a server</a>.
+</aside>
+
+## Our goals
+> Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.
+
+* Tutorials for running, studying, changing, and improving our emulators.
+* Central authentication that allows a public realm list to register our emulators.
+* A community to support you in your studies as you gain a useful skill set.
+* Open source and free forever (as in speech and beer).
+
+## About us
+Wobblin’ Goblin is a community where we play games and make fun things. If you're a developer you'll learn about programming, system administration, and databases amongst other things. While developing your emulator you get to play with others while you learn. We also need players to test the emulators the developers have made so there's a role for everyone.
 
 ## Creating an account
 ```
 /account create <username> <password> <password>
 ```
 
-You can create a Wobblin' Goblin account on the [Discord](https://discord.gg/rqq33HmMyX). Direct message Winzig to create an account.
-
-![Create Account](images/create-account.png)
-
-## Setting your realm list
 ```shell
 set realmlist logon.wobgob.org
 ```
 
-You'll want to set the realm list for your client in `Data/enUS/realmlist.wtf`.
+You can create a Wobblin' Goblin account on the [Discord](https://discord.gg/rqq33HmMyX). Direct message Winzig to create an account.
+
+![Create Account](images/create-account.png)
+
+You'll also want to set the realm list for your client in `Data/enUS/realmlist.wtf`.
 
 <aside class="success">
   If you're a player, you're done!
@@ -113,8 +127,6 @@ Given our specifications the price of the server is standard. Note that you usua
 </aside>
 
 # Starting the emulator
-> Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.
-
 After you server is installed its status will be set to "Running" and you'll be able to click on it.
 
 ![Instances](images/instances.jpg)
