@@ -60,7 +60,7 @@ It's easier to run a server using Linux than other operating systems. Getting Do
 We'll be using [Vultr](https://www.vultr.com/) in this tutorial but most major hosting providers will be similar.
 
 ## Signing up
-The first thing you'll want to do is to sign up with your hosting provider. For Vultr you can sign up at [https://www.vultr.com/register/](https://www.vultr.com/register/).
+The first thing you'll want to do is to sign up with your hosting provider. You can get $50 free credit with Vultr by going to [https://www.vultr.com/promo/try50/](https://www.vultr.com/promo/try50/).
 
 ## Deploying a server
 You'll then be redirected to [https://my.vultr.com/](https://my.vultr.com/). At this point you'll want to deploy a server.
