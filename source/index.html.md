@@ -2,7 +2,7 @@
 title: Getting Started
 
 toc_footers:
-  - <a href='https://discord.gg/rqq33HmMyX'>Need help?</a>
+  - <a target="_blank" href='https://discord.gg/rqq33HmMyX'>Need help?</a>
 
 search: true
 
@@ -12,9 +12,9 @@ code_clipboard: true
 # Welcome to Wobblin' Goblin
 It's nice to meet you.
 
-<aside class="notice">
-  If you're player you can skip to <a href="#creating-an-account">creating an account</a>. If you're a developer you can skip to <a href="#creating-a-server">creating a server</a>.
-</aside>
+* If you're player you can skip to [creating an account](#creating-an-account).
+* If you're a developer you can skip to [creating a server](#creating-a-server).
+* If you're an experienced developer and have a working Docker installation you can skip to [starting the server](#starting-the-server).
 
 ## Our goals
 > Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.
@@ -28,7 +28,7 @@ It's nice to meet you.
 Wobblin’ Goblin is a community where we play games and make fun things. If you're a developer you'll learn about programming, system administration, and databases amongst other things. While developing your emulator you get to play with others while you learn. We also need players to test the emulators the developers have made so there's a role for everyone.
 
 ## Creating an account
-```
+```shell
 /account create <username> <password> <password>
 ```
 
@@ -36,7 +36,7 @@ Wobblin’ Goblin is a community where we play games and make fun things. If you
 set realmlist logon.wobgob.org
 ```
 
-You can create a Wobblin' Goblin account on the [Discord](https://discord.gg/rqq33HmMyX). Direct message Winzig to create an account.
+You can create a Wobblin' Goblin account on [Discord](https://discord.gg/rqq33HmMyX). Direct message Winzig to create an account.
 
 ![Create Account](images/create-account.png)
 
@@ -47,7 +47,7 @@ You'll also want to set the realm list for your client in `Data/enUS/realmlist.w
 </aside>
 
 <aside class="notice">
-  If you're a developer, you've got a few extra steps before you create a server.
+  If you're a developer, you've got a few extra steps before you can start playing.
 </aside>
 
 # Creating a server
@@ -59,8 +59,8 @@ It's easier to run a server using Linux than other operating systems. Getting Do
 
 We'll be using [Vultr](https://www.vultr.com/) in this tutorial but most major hosting providers will be similar.
 
-## Creating an account
-The first thing you'll want to do is create an account with your hosting provider. For Vultr you can sign up at [https://www.vultr.com/register/](https://www.vultr.com/register/).
+## Signing up
+The first thing you'll want to do is to sign up with your hosting provider. For Vultr you can sign up at [https://www.vultr.com/register/](https://www.vultr.com/register/).
 
 ## Deploying a server
 You'll then be redirected to [https://my.vultr.com/](https://my.vultr.com/). At this point you'll want to deploy a server.
@@ -209,7 +209,7 @@ The remote status bar item can quickly show you in which context VS Code is runn
 
 ![Remote SSH commands](images/remote-ssh-commands.jpg)
 
-In VS Code, select **Remote-SSH: Connect to Host...** from the Command Palette (`F1`, `Ctrl+Shift+P`) and enter `<username>@<ip-address>` where `<username>` and `<ip-address>` are the username and IP address you noted down from your hosting provider previously. In our case the username was `root` and the IP address was `45.76.118.95` so we'd enter `root@45.76.118.95`.
+In VS Code, select **Remote-SSH: Connect to Host...** from the Command Palette (`F1`, `Ctrl+Shift+P`) and enter `<username>@<address>` where `<username>` and `<address>` are the username and IP address you noted down from your hosting provider previously. In our case the username was `root` and the IP address was `45.76.118.95` so we'd enter `root@45.76.118.95`.
 
 <aside class="success">
   Enter your password that you noted down previously and you're connected!
@@ -227,29 +227,35 @@ You should now be presented with a prompt such as `root@broken:~#`.
 
 ## Starting the server
 ```shell
-# Enter this into your terminal. Downloads a file describing the server and
-# then starts the server using Docker.
-wget https://raw.githubusercontent.com/wobgob/core/main/docker-compose.yml; \
-  docker compose up -d
+# Enter the following into your terminal at the prompt.
+pip3 install docker-compose
+
+# Downloads a file describing the server.
+wget https://wobgob.org/docker-compose.yml
+
+# Start the server.
+docker-compose up -d
 ```
 
-Don't worry about understanding the command, we'll be exploring the shell and terminal further in another tutorial.
+Don't worry about understanding the commands yet, we'll be exploring the shell and terminal further in another tutorial.
 
 ## Accessing the server
 ```shell
 # Access the server's console.
-docker attach core
+docker attach root_server_1
+
 # Create an account.
 account create <username> <password>
+
 # Make it a game master account.
 account set gmlevel <username> 3 -1
 ```
 
-Once the server has initialized you can now access your world server. To detach when you're finished press `Ctrl+P` then `Ctrl+Q`. Once you're at the server's console enter the account creation command and elevate that account to be a game master.
+Once the server has initialized you can access your world server. To detach when you're finished press `Ctrl+P` then `Ctrl+Q`. Once you're at the server's console enter the account creation command and elevate that account to be a game master.
 
 ## Client setup
 ```shell
-set realmlist <ip-address> # Where <ip-address> is the IP address you used earlier.
+set realmlist <address> # Where <address> is the IP address you used earlier.
 ```
 
 Modify your `Data/enUS/realmlist.wtf` file so you can connect to your server.
