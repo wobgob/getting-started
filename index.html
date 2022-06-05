@@ -307,13 +307,16 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#welcome-to-wobblin-39-goblin" class="toc-h1 toc-link" data-title="Welcome to Wobblin' Goblin">Welcome to Wobblin' Goblin</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#creating-an-account" class="toc-h2 toc-link" data-title="Creating an account">Creating an account</a>
+                    <a href="#our-goals" class="toc-h2 toc-link" data-title="Our goals">Our goals</a>
                   </li>
                   <li>
-                    <a href="#setting-your-realm-list" class="toc-h2 toc-link" data-title="Setting your realm list">Setting your realm list</a>
+                    <a href="#about-us" class="toc-h2 toc-link" data-title="About us">About us</a>
+                  </li>
+                  <li>
+                    <a href="#creating-an-account" class="toc-h2 toc-link" data-title="Creating an account">Creating an account</a>
                   </li>
               </ul>
           </li>
@@ -389,16 +392,33 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>If you&#39;re a developer you can create your own server. If you&#39;re a player you can help test other people&#39;s servers.</p>
+        <h1 id='welcome-to-wobblin-39-goblin'>Welcome to Wobblin&#39; Goblin</h1>
+<p>It&#39;s nice to meet you.</p>
+
+<aside class="notice">
+  If you're player you can skip to <a href="#creating-an-account">creating an account</a>. If you're a developer you can skip to <a href="#creating-a-server">creating a server</a>.
+</aside>
+<h2 id='our-goals'>Our goals</h2>
+<blockquote>
+<p>Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.</p>
+</blockquote>
+
+<ul>
+<li>Tutorials for running, studying, changing, and improving our emulators.</li>
+<li>Central authentication that allows a public realm list to register our emulators.</li>
+<li>A community to support you in your studies as you gain a useful skill set.</li>
+<li>Open source and free forever (as in speech and beer).</li>
+</ul>
+<h2 id='about-us'>About us</h2>
+<p>Wobblin’ Goblin is a community where we play games and make fun things. If you&#39;re a developer you&#39;ll learn about programming, system administration, and databases amongst other things. While developing your emulator you get to play with others while you learn. We also need players to test the emulators the developers have made so there&#39;s a role for everyone.</p>
 <h2 id='creating-an-account'>Creating an account</h2><div class="highlight"><pre class="highlight plaintext"><code>/account create &lt;username&gt; &lt;password&gt; &lt;password&gt;
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist logon.wobgob.org
 </code></pre></div>
 <p>You can create a Wobblin&#39; Goblin account on the <a href="https://discord.gg/rqq33HmMyX">Discord</a>. Direct message Winzig to create an account.</p>
 
 <p><img src="images/create-account-d4e1d3d6.png" alt="Create Account" /></p>
-<h2 id='setting-your-realm-list'>Setting your realm list</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="nb">set </span>realmlist logon.wobgob.org
-</code></pre></div>
-<p>You&#39;ll want to set the realm list for your client in <code>Data/enUS/realmlist.wtf</code>.</p>
+
+<p>You&#39;ll also want to set the realm list for your client in <code>Data/enUS/realmlist.wtf</code>.</p>
 
 <aside class="success">
   If you're a player, you're done!
@@ -481,10 +501,6 @@
   Hit "Deploy Now" and your server will start installing.
 </aside>
 <h1 id='starting-the-emulator'>Starting the emulator</h1>
-<blockquote>
-<p>Reverse-engineered from the inputs and outputs of clients of popular multiplayer online role playing games such as World of Warcraft, an MMO framework or core emulates the server in the relationship between the client and server in an online game. Open source emulators give the user the freedom to run, study, change, and improve their own server.</p>
-</blockquote>
-
 <p>After you server is installed its status will be set to &quot;Running&quot; and you&#39;ll be able to click on it.</p>
 
 <p><img src="images/instances-0aa5dec1.jpg" alt="Instances" /></p>
